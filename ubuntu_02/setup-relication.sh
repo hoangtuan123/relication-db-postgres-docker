@@ -17,4 +17,6 @@ fi
 
 /etc/init.d/postgresql stop
 cp /recovery.conf /var/lib/postgresql/9.6/main/recovery.conf
+chown postgres:postgres /var/lib/postgresql/9.6/main/recovery.conf
+chmod 600 /var/lib/postgresql/9.6/main/recovery.conf
 /etc/init.d/postgresql start
